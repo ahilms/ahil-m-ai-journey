@@ -42,28 +42,24 @@ export const SkillsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="py-20 md:py-32 relative" ref={ref}>
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl -translate-y-1/2" />
-      <div className="absolute top-1/3 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-
+    <section id="skills" className="py-20 md:py-32 bg-secondary/30 relative" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
             My Skills
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4 text-foreground">
             What I'm Good At
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -72,7 +68,7 @@ export const SkillsSection = () => {
               transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
               className="glass-card p-6 md:p-8"
             >
-              <h3 className="font-heading text-xl font-semibold mb-6 gradient-text">
+              <h3 className="font-heading text-xl font-semibold mb-6 text-primary">
                 {category.title}
               </h3>
               <div className="space-y-5">
@@ -95,7 +91,7 @@ export const SkillsSection = () => {
                           delay: categoryIndex * 0.1 + skillIndex * 0.1 + 0.3,
                           ease: "easeOut",
                         }}
-                        className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
+                        className="h-full bg-primary rounded-full"
                       />
                     </div>
                   </div>

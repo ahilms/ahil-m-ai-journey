@@ -11,15 +11,14 @@ export const LoadingScreen = () => {
       <div className="flex flex-col items-center gap-4">
         <motion.div
           animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
+            scale: [1, 1.1, 1],
           }}
           transition={{
-            duration: 2,
+            duration: 1.5,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center"
+          className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center"
         >
           <span className="font-heading text-2xl font-bold text-primary-foreground">A</span>
         </motion.div>
