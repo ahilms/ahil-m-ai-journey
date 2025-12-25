@@ -39,18 +39,18 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-20 md:py-32 relative" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
             My Work
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4 text-foreground">
             Featured Projects
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
             Here are some projects I've worked on to apply my learning and build real-world solutions.
           </p>
@@ -63,10 +63,10 @@ export const ProjectsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card p-6 flex flex-col group hover-glow"
+              className="glass-card p-6 flex flex-col group hover-lift"
             >
               <div className="flex items-center justify-between mb-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Folder className="text-primary" size={24} />
                 </div>
                 <div className="flex gap-3">
@@ -74,7 +74,7 @@ export const ProjectsSection = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors"
                     aria-label="View on GitHub"
                   >
                     <Github size={20} />
@@ -84,7 +84,7 @@ export const ProjectsSection = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors"
                       aria-label="View live demo"
                     >
                       <ExternalLink size={20} />

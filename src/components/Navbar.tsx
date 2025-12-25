@@ -30,13 +30,13 @@ export const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-card shadow-lg" : "bg-transparent"
+        scrolled ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#home" className="font-heading text-xl font-bold gradient-text">
-            Ahil M
+          <a href="#home" className="font-heading text-xl font-bold text-foreground">
+            Ahil<span className="text-primary">.</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -73,7 +73,7 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-card border-t border-glass-border"
+            className="md:hidden bg-background border-t border-border"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navItems.map((item) => (

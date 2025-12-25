@@ -34,34 +34,31 @@ export const AboutSection = () => {
     <section id="about" className="py-20 md:py-32 relative" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
             About Me
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4 text-foreground">
             Get to Know Me
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="glass-card p-8 relative">
-              <div className="absolute -top-4 -left-4 w-20 h-20 bg-primary/30 rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/30 rounded-full blur-2xl" />
-              
-              <div className="relative z-10 space-y-4 text-muted-foreground">
+            <div className="glass-card p-8">
+              <div className="space-y-4 text-muted-foreground">
                 <p>
                   Hello! I'm <span className="text-foreground font-medium">Ahil M</span>, a passionate B.Tech student specializing in{" "}
-                  <span className="gradient-text font-medium">Artificial Intelligence & Data Science</span> from India.
+                  <span className="text-primary font-medium">Artificial Intelligence & Data Science</span> from India.
                 </p>
                 <p>
                   My journey into tech started from an unexpected background in Biology, but I discovered my true calling in the world of AI and machine learning. This transition has given me a unique perspective on problem-solving and data analysis.
@@ -77,20 +74,20 @@ export const AboutSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="grid grid-cols-2 gap-4"
           >
             {highlights.map((item, index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                className="glass-card p-6 hover-glow group"
+                className="glass-card p-6 hover-lift group"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <item.icon className="text-primary" size={24} />
                 </div>
                 <h3 className="font-heading font-semibold text-foreground mb-2">

@@ -8,48 +8,47 @@ export const HeroSection = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
     >
-      {/* Background Elements */}
+      {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <span className="inline-block px-4 py-2 rounded-full glass-card text-sm text-muted-foreground mb-6">
-              👋 Welcome to my portfolio
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+              Welcome to my portfolio
             </span>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground"
           >
             Hi, I'm{" "}
-            <span className="gradient-text text-glow">Ahil M</span>
+            <span className="gradient-text">Ahil M</span>
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4"
           >
             B.Tech AI & Data Science Student
           </motion.p>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="text-base sm:text-lg text-muted-foreground/80 mb-8 max-w-2xl mx-auto"
           >
             Aspiring AI/ML Engineer passionate about building intelligent systems.
@@ -58,9 +57,9 @@ export const HeroSection = () => {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
             <Button variant="hero" size="lg" asChild>
@@ -72,16 +71,16 @@ export const HeroSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex items-center justify-center gap-6"
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex items-center justify-center gap-4"
           >
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 glass-card hover:bg-primary/20 transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-full bg-secondary hover:bg-primary/10 hover:text-primary transition-all duration-300"
             >
               <Github size={20} />
             </a>
@@ -89,13 +88,13 @@ export const HeroSection = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 glass-card hover:bg-primary/20 transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-full bg-secondary hover:bg-primary/10 hover:text-primary transition-all duration-300"
             >
               <Linkedin size={20} />
             </a>
             <a
               href="mailto:ahil@example.com"
-              className="p-3 glass-card hover:bg-primary/20 transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-full bg-secondary hover:bg-primary/10 hover:text-primary transition-all duration-300"
             >
               <Mail size={20} />
             </a>
@@ -107,12 +106,12 @@ export const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.6 }}
+        transition={{ delay: 1, duration: 0.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.a
           href="#about"
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
         >

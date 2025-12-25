@@ -9,22 +9,19 @@ export const MusicSection = () => {
 
   return (
     <section className="py-20 relative overflow-hidden" ref={ref}>
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 mb-6 animate-glow-pulse">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
             <Music className="text-primary" size={28} />
           </div>
 
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-            Beyond the Code: <span className="gradient-text">My Musical Side</span>
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            Beyond the Code: <span className="text-primary">My Musical Side</span>
           </h2>
 
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
@@ -33,12 +30,12 @@ export const MusicSection = () => {
           </p>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="glass-card p-8 flex flex-col sm:flex-row items-center gap-6"
           >
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0">
+            <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shrink-0">
               <Mic2 className="text-primary-foreground" size={36} />
             </div>
             <div className="text-left">
