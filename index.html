@@ -1,23 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ahil M - B.Tech AI & Data Science Student | Aspiring AI/ML Engineer | Portfolio showcasing projects, skills, and journey in artificial intelligence and machine learning." />
-    <meta name="keywords" content="Ahil M, AI Engineer, Data Science, Machine Learning, Portfolio, Python, India" />
-    <meta name="author" content="Ahil M" />
-    <meta property="og:title" content="Ahil M | AI & Data Science Portfolio" />
-    <meta property="og:description" content="Aspiring AI/ML Engineer building the future with code and creativity." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahil M — PORTFOLIO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>Ahil M | AI & Data Science Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- custom cursor (desktop only, JS adds .is-active) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- scroll progress -->
+    <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+
+    <header>
+        <a href="#home" class="logo">ahil<span>.dev</span></a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primaryNav">
+            <a href="#home" class="active">home</a>
+            <a href="#skills">skills</a>
+            <a href="#education">education</a>
+            <a href="#projects">projects</a>
+            <a href="#gallery">gallery</a>
+            <a href="#contact">contact</a>
+        </nav>
+    </header>
+
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <p class="eyebrow">$ who am i</p>
+            <h1 class="kinetic-name" aria-label="Ahil M">
+                <span class="letter">A</span><span class="letter">h</span><span class="letter">i</span><span class="letter">l</span>
+                <span class="letter accent">M</span>
+            </h1>
+            <h3 class="role">Final year AI&DS Student | Aspiring AI Developer & Data Analyst</h3>
+            <p class="lede">Aspiring AI Engineer with a strong foundation in Python, Machine Learning, Data Analysis, and Web Development. Dedicated to creating innovative, data-driven applications and expanding my technical expertise.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary magnetic">Hire me</a>
+                <a href="#projects" class="btn btn-ghost magnetic">See the work</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/ahil-m-b35245352" aria-label="LinkedIn" class="magnetic"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ahilms" aria-label="GitHub" class="magnetic"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/ahilms__/" aria-label="Instagram" class="magnetic"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <article class="profile-photo-card reveal" style="--i:1">
+            <img src="Profile.jpeg" alt="Profile photo of Ahil M">
+            <div class="profile-photo-body">
+                <p class="eyebrow">~/profile</p>
+                <h3>Hey, I’m Ahil</h3>
+                <p class="lede"> Final year AI&DS student with a passion for building innovative applications.</p>
+            </div>
+        </article>
+
+        <div class="terminal" id="terminal">
+            <div class="terminal-bar">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <p>ahil@portfolio — zsh</p>
+            </div>
+            <div class="terminal-body" id="terminalBody"></div>
+        </div>
+
+        <article class="resume-card reveal" style="--i:2">
+            <div class="resume-header">
+                <span class="resume-label"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span>Resume</span></span>
+                <span class="resume-meta">PDF preview & download</span>
+            </div>
+            <div class="resume-frame" tabindex="0" aria-label="Resume preview card">
+                <div class="resume-thumb" aria-hidden="true">
+                    <div class="resume-page">
+                        <div class="resume-tag">Ahil M</div>
+                        <div class="resume-summary">
+                            <span>AI & DS Student</span>
+                            <span>Frontend · Data · Machine Learning</span>
+                            <span>Accessible interfaces, polished motion, clean code.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-overlay">
+                    <a href="resume.pdf" target="_blank" rel="noreferrer noopener" class="btn btn-resume" aria-label="Preview resume in new tab">Preview Resume</a>
+                    <a href="resume.pdf" download class="btn btn-resume btn-secondary" aria-label="Download resume PDF">Download Resume</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <div class="ticker-strip" aria-hidden="true">
+        <div class="ticker-track">
+            <span>Python</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Java</span><span>GITHUB</span>
+            <span>Python</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Java</span><span>GITHUB</span>
+        </div>
+    </div>
+
+    <section class="skills" id="skills">
+        <p class="eyebrow center">~/skills</p>
+        <h2>What I build with</h2>
+        <div class="skills-container">
+            <div class="skill-category reveal" style="--i:0">
+                <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Frontend</h3>
+                <div class="skill-item">
+                    <div class="skill-name">HTML & CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%"></div>
+                    </div>
+                    <span class="skill-percent">50%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">React</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 30%"></div>
+                    </div>
+                    <span class="skill-percent">30%</span>
+                </div>
+            </div>
+            <div class="skill-category reveal" style="--i:1">
+                <h3><i class="fa-solid fa-terminal" aria-hidden="true"></i> Programming Languages</h3>
+                <div class="skill-item">
+                    <div class="skill-name">Python</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Java</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%"></div>
+                    </div>
+                    <span class="skill-percent">50%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">SQL</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+            </div>
+            <div class="skill-category reveal" style="--i:2">
+                <h3><i class="fa-solid fa-database" aria-hidden="true"></i> Databases</h3>
+                <div class="skill-item">
+                    <div class="skill-name">MySQL</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">PostgreSQL</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">MongoDB</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                </div>
+            </div>
+            <div class="skill-category reveal" style="--i:3">
+                <h3><i class="fa-solid fa-toolbox" aria-hidden="true"></i> Tools & Platforms</h3>
+                <div class="skill-item">
+                    <div class="skill-name">GitHub</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">VS Code</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Vercel</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+            </div>
+            <div class="skill-category reveal" style="--i:4">
+                <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> AI & Data Science</h3>
+                <div class="skill-item">
+                    <div class="skill-name">Machine Learning</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Data Analysis</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Generative AI</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <p class="eyebrow center">~/education</p>
+        <h2>How I got here</h2>
+        <div class="timeline">
+            <div class="timeline-item reveal" style="--i:0">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="year">2023— 2027</span>
+                    <h3>Bachelor of Technology(Artificial Intelligence & Data Science)</h3>
+                    <p class="institution">Dhanalakshmi Srinivasan Engineering College(A)|CGPA: 7.87</p>
+                    <p class="description">Artificial Intelligence and Data Science, focused on machine learning and data analysis.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" style="--i:1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="year">2022</span>
+                    <h3>Higher Secondary Education</h3>
+                    <p class="institution">S.E.T Vidhyadevi Matric Hr. Sec. School</p>
+                    <p class="description">Completed my Higher Secondary Education with a focus on Science and Mathematics with 79.3 %</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" style="--i:2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="year">2020</span>
+                    <h3>SSLC</h3>
+                    <p class="institution">Reena Mercy Matriculation School</p>
+                    <p class="description">Completed with distinction in  Social Science, Science and Mathematics with 93.6 %</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <p class="eyebrow center">~/projects</p>
+        <h2>Selected work</h2>
+        <div class="projects-container">
+            <div class="project-card reveal" style="--i:0">
+                <div class="project-img">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="project-tag">e-commerce</span>
+                </div>
+                <div class="project-body">
+                    <h3>Storefront Engine</h3>
+                    <p>A fully functional e-commerce platform built with React and Node.js, with payment integration.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View demo</a>
+                        <a href="#" class="project-link ghost">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" style="--i:1">
+                <div class="project-img alt">
+                    <img src="career.png" >
+                   <i class="fa-solid fa-cloud-sun"></i>
+                    <span class="project-tag">Web</span>
+                </div>
+                <div class="project-body">
+                    <h3>CAREER AI</h3>
+                    <p>AI-powered career guidance platform with personalized recommendations of courses and internships opportunities.</p>
+                    <div class="project-links">
+                        <a href="https://career-ai-frontend.vercel.app/" class="project-link">View demo</a>
+                        <a href="https://github.com/ahilms/career-ai-frontend" class="project-link ghost">GitHub</a>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" style="--i:2">
+                <div class="project-img">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span class="project-tag">collaboration</span>
+                </div>
+                <div class="project-body">
+                    <h3>Task Management System</h3>
+                    <p>Collaborative task tool with real-time updates, presence, and user authentication.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View demo</a>
+                        <a href="#" class="project-link ghost">GitHub</a>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <p class="eyebrow center">~/gallery</p>
+        <h2>Visual snapshots</h2>
+        <div class="gallery-container">
+            <div class="gallery-card reveal" style="--i:0">
+                <img src="portfolio1.jpg" alt="UI design work">
+                <div class="gallery-caption"><h4>UI Design</h4></div>
+            </div>
+            <div class="gallery-card reveal" style="--i:1">
+                <img src="portfolio2.jpg" alt="Mobile app design">
+                <div class="gallery-caption"><h4>Mobile App</h4></div>
+            </div>
+            <div class="gallery-card reveal" style="--i:2">
+                <img src="portfolio3.jpg" alt="Dashboard design">
+                <div class="gallery-caption"><h4>Dashboard</h4></div>
+            </div>
+            <div class="gallery-card reveal" style="--i:3">
+                <img src="portfolio4.jpg" alt="Marketing site design">
+                <div class="gallery-caption"><h4>Marketing Site</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <p class="eyebrow center">~/contact</p>
+        <h2>Let's build something</h2>
+        <div class="contact-container">
+            <div class="contact-info reveal" style="--i:0">
+                <h3>Contact information</h3>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div><h4>Email</h4><p>ahil3112005@gmail.com</p></div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div><h4>Phone</h4><p>+91 9597480552</p></div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <div><h4>Location</h4><p>Pudukkottai, Tamil Nadu, India</p></div>
+                </div>
+            </div>
+            <form class="contact-form reveal" style="--i:1" id="contactForm" action="https://formsubmit.co/ahil3112005@gmail.com" method="POST" novalidate>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Your name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Your email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder=" " rows="5" required></textarea>
+                    <label for="message">Your message</label>
+                </div>
+                <button type="submit" class="btn btn-primary magnetic full" id="submitBtn">Send message</button>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Designed & built by Ahil M — <span>2026</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
